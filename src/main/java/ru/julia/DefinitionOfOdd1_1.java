@@ -3,7 +3,7 @@ package ru.julia;
 /**
  * 1.1 Определение четности числа
  */
-public class Main {
+public class DefinitionOfOdd1_1 {
     public static void main(String[] args) {
         int a = 6;
         if (a % 2 == 0) {
