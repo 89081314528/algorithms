@@ -6,9 +6,13 @@ import java.util.List;
 /**
  * 1.2 Определить цифры заданного числа, их количество и сумму
  */
-public class DefenitionOfNumbers1_2 {
+public class NumeralsOfNumber1_2 {
     public static void main(String[] args) {
         int number = -1010;
+        numeralsOfNumber(number);
+    }
+
+    public static void numeralsOfNumber(int number) {
         number = Math.abs(number);
         if (number == 0) {
             System.out.println(number);

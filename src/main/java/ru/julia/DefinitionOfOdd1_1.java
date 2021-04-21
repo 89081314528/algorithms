@@ -5,11 +5,15 @@ package ru.julia;
  */
 public class DefinitionOfOdd1_1 {
     public static void main(String[] args) {
-        int a = 6;
-        if (a % 2 == 0) {
-            System.out.println("Число четное");
+        int number = 11;
+        definitionOfOdd(number);
+    }
+
+    public static void definitionOfOdd(int number) {
+        if (number % 2 == 0) {
+            System.out.println("Число " + number + " четное");
         } else {
-            System.out.println("Число нечетное");
+            System.out.println("Число " + number + " нечетное");
         }
     }
 }
