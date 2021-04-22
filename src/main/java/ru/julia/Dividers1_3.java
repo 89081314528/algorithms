@@ -9,10 +9,10 @@ import java.util.List;
  */
 public class Dividers1_3 {
     public static void main(String[] args) {
-        int number = 42;
+        int number = 3;
         deviders1(number);
         deviders2(number);
-        number = 49;
+        number = 100;
         deviders1(number);
         deviders2(number);
 
