@@ -13,6 +13,9 @@ public class InsertSort3_3_3 {
             numbers.add(number);
         }
         System.out.println(numbers);
+        insertSort(numbers);
+    }
+    public static void insertSort(List<Integer> numbers) {
         for (int i = 1; i < numbers.size(); i++) {
             int current = numbers.get(i);
             for (int j = 0; j < i; j++) {
