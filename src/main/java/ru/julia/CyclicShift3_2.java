@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Переместить все элементы массива вправо на n позиций, пр. а1,а2,а3,а4,а5 на 2 позиции а4,а5,а1,а2,а3
+ * 3.2. Переместить все элементы массива вправо на n позиций, пр. а1,а2,а3,а4,а5 на 2 позиции а4,а5,а1,а2,а3
  * с использованием вспомогательного массива
  * с использованием вспомогательной переменной
  * с использованием инвертирования массива
@@ -25,8 +25,8 @@ public class CyclicShift3_2 {
         System.out.println(numbers);
         int shift = 4;
         shiftWithMassive(numbers,shift);
-        shiftWithVariable(numbers,shift);
-        shiftWithInverting(numbers,shift);
+//        shiftWithVariable(numbers,shift);
+//        shiftWithInverting(numbers,shift);
 
         }
     public static void shiftWithMassive(List<Integer> numbers, int shift) {
