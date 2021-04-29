@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * 3.3.5 Быстрая сортировка
+ * 3.3.5 Быстрая сортировка (делит пополам). Написать, чтобы части могли быть неравными.
  */
 public class FastSort3_3_5 {
     public static void main(String[] args) {
