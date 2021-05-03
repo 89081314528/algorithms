@@ -10,7 +10,7 @@ import java.util.List;
 public class FastSort3_3_5 {
     public static void main(String[] args) {
         int count = 0;
-        for (int i = 0; i < 2000000; i++) {
+        for (int i = 0; i < 100; i++) {
             List<Integer> numbers = new ArrayList<>();
             for (int j = 0; j < 50; j++) {
                 int number = (int) (Math.random() * 100 - 0);
