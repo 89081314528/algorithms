@@ -18,6 +18,7 @@ public class Algorithms21 {
 
         addLine(list, 7);
 
+
     }
 //        int a = 5;
 //        System.out.println("Сумма от одного до " + a + " равна " + sum(5));
@@ -44,4 +45,5 @@ public class Algorithms21 {
         }
         return n + sum(n - 1);
     }
+
 }
