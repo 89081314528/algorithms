@@ -14,15 +14,15 @@ public class FastSort3_3_5_2 {
             numbers.add(number);
         }
             System.out.println(numbers);
-        sortByMiddle(numbers);
+        System.out.println(sortByPoint(numbers));
     }
-    public static List<Integer> sortByMiddle(List<Integer> numbers) { // сортирует один раз
-        int middle = numbers.get(numbers.size() / 2 - 1);
-        int middleIndex = numbers.size() / 2 - 1;
+    public static List<Integer> sortByPoint(List<Integer> numbers) { // сортирует один раз
+        int endOfFirstPart = 0;
+        int point = numbers.get(0);
         int maxIndex = 0;
         int max = numbers.get(0);
         for (int j = 0; j < numbers.size(); j++) {
-            if (numbers.get(j) >= middle) {
+            if (numbers.get(j) > point) {
                 max = numbers.get(j);
                 maxIndex = j;
                 break;
@@ -31,77 +31,47 @@ public class FastSort3_3_5_2 {
         int min = numbers.get(numbers.size() - 1);
         int minIndex = numbers.size() - 1;
         for (int j = numbers.size() - 1; j >= 0; j--) {
-            if (numbers.get(j) <= middle) {
+            if (numbers.get(j) <= point) {
                 min = numbers.get(j);
                 minIndex = j;
                 break;
             }
         }
 
-        if (maxIndex < minIndex && max >= middle && min <= middle) {
-            if (min == max && maxIndex == middleIndex) {
-                for (int j = minIndex - 1; j >= 0; j--) {
-                    if (numbers.get(j) < middle) {
-                        min = numbers.get(j);
-                        minIndex = j;
-                        break;
-                    }
-                }
-            }
-            if (min == max && minIndex == middleIndex) {
-                for (int j = maxIndex + 1; j < numbers.size(); j++) {
-                    if (numbers.get(j) > middle) {
-                        max = numbers.get(j);
-                        maxIndex = j;
-                        break;
-                    }
-                }
-            }
+        if (maxIndex < minIndex && max > point && min <= point) {
             numbers.set(maxIndex, min);
             numbers.set(minIndex, max);
+            System.out.println("max = " + max);
+            System.out.println("min = " + min);
             System.out.println(numbers);
+            endOfFirstPart = maxIndex;
         }
 
         while (maxIndex < minIndex) {
             for (int j = maxIndex + 1; j < numbers.size(); j++) {
-                if (numbers.get(j) >= middle) {
+                if (numbers.get(j) > point) {
                     max = numbers.get(j);
                     maxIndex = j;
                     break;
                 }
             }
             for (int j = minIndex - 1; j >= 0; j--) {
-                if (numbers.get(j) <= middle) {
+                if (numbers.get(j) <= point) {
                     min = numbers.get(j);
                     minIndex = j;
                     break;
                 }
             }
-            if (maxIndex < minIndex && max >= middle && min <= middle) {
-                if (min == max && maxIndex == middleIndex) {
-                    for (int j = minIndex - 1; j >= 0; j--) {
-                        if (numbers.get(j) < middle) {
-                            min = numbers.get(j);
-                            minIndex = j;
-                            break;
-                        }
-                    }
-                }
-                if (min == max && minIndex == middleIndex) {
-                    for (int j = maxIndex + 1; j < numbers.size(); j++) {
-                        if (numbers.get(j) > middle) {
-                            max = numbers.get(j);
-                            maxIndex = j;
-                            break;
-                        }
-                    }
-                }
+            if (maxIndex < minIndex && max > point && min <= point) {
                 numbers.set(maxIndex, min);
                 numbers.set(minIndex, max);
+                System.out.println("max = " + max);
+                System.out.println("min = " + min);
                 System.out.println(numbers);
+                endOfFirstPart = maxIndex;
             }
         }
+        System.out.println("endOfFirstPart = " + endOfFirstPart);
         return numbers;
     }
-
 }
