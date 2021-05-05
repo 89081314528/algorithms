@@ -10,6 +10,27 @@ import java.util.List;
 public class Algorithms111 {
     public static void main(String[] args) {
         Integer[] array = {0, 0, 5, 0, 0, 0, 0, 1, 0, 0, 0, 1};
+        method1(array);
+        method2(array);
+    }
+
+    public static void method2(Integer[] array) {
+        int count = 0;
+        int max = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 0) {
+                count = count + 1;
+            } else {
+                if (max < count) {
+                    max = count;
+                }
+                count = 0;
+            }
+        }
+        System.out.println(max);
+    }
+
+    public static void method1(Integer[] array) {
         List<Integer> list = new ArrayList<>(Arrays.asList(array));
         System.out.println(list);
         int maxCount = 0;
@@ -23,7 +44,6 @@ public class Algorithms111 {
                     if (next == 0) {
                         count = count + 1;
                     } else {
-                        System.out.println("count = " + count);
                         i = j;
                         break;
                     }
