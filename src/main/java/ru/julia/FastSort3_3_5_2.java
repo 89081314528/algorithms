@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * 3.3.5 Быстрая сортировка,части могут быть неравными.
+ * не доделала
  */
 public class FastSort3_3_5_2 {
     public static void main(String[] args) {
