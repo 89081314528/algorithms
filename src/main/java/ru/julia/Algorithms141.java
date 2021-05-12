@@ -28,31 +28,31 @@ public class Algorithms141 {
         list.add(stalin);
         list.add(putin);
 
-        List<Employee> newlist = bubbleSortByAge(list);
-        printList(newlist);
-        System.out.println();
-        printList(bubbleSortInside(newlist));
+//        List<Employee> newlist = bubbleSortByAge(list);
+//        printList(newlist);
+//        System.out.println();
+//        printList(bubbleSortInside(newlist));
 
     }
 
-    public static List<Employee> bubbleSortByAge(List<Employee> list) {
-        for (int j = 0; j < list.size() - 1; j++) {
-            int count = 0;
-            for (int i = 0; i < list.size() - 1 - j; i++) {
-                Employee current = list.get(i);
-                Employee next = list.get(i + 1);
-                if (current.getAge() > next.getAge()) {
-                    list.set(i + 1, current);
-                    list.set(i, next);
-                    count = count + 1;
-                }
-            }
-            if (count == 0) {
-                break;
-            }
-        }
-        return list;
-    }
+//    public static List<Employee> bubbleSortByAge(List<Employee> list) {
+//        for (int j = 0; j < list.size() - 1; j++) {
+//            int count = 0;
+//            for (int i = 0; i < list.size() - 1 - j; i++) {
+//                Employee current = list.get(i);
+//                Employee next = list.get(i + 1);
+//                if (current.getAge() > next.getAge()) {
+//                    list.set(i + 1, current);
+//                    list.set(i, next);
+//                    count = count + 1;
+//                }
+//            }
+//            if (count == 0) {
+//                break;
+//            }
+//        }
+//        return list;
+//    }
 
     public static List<Employee> bubbleSortInside(List<Employee> list) {
         int start = 0;
@@ -74,8 +74,7 @@ public class Algorithms141 {
     }
 
     public static void printList(List<Employee> list) {
-        for (
-                int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             Employee current = list.get(i);
             System.out.println(current.getSurname() + " " + current.getAge() + " " + current.getSalary());
         }
