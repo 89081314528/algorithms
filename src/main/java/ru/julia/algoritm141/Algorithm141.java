@@ -7,27 +7,26 @@ import java.util.List;
 
 public class Algorithm141 {
     public static void main(String[] args) {
-        Employee ivanov = new Employee("Ivanov", 45, 100_000);
-        Employee petrov = new Employee("Petrov", 35, 100_000);
-        Employee vanin = new Employee("Vanin", 40, 80_000);
-        Employee petin = new Employee("Petin", 45, 10_000);
-        Employee lenin = new Employee("Lenin", 35, 120_000);
-        Employee stalin = new Employee("stalin", 40, 50_000);
-        Employee putin = new Employee("putin", 35, 40_000);
-
-//        List<Employee> list = new ArrayList<>(new Employee("Ivanov", 40, 100000));//почему не могу так сделать?
-        List<Employee> list = new ArrayList<>();
-        list.add(ivanov);
-        list.add(petrov);
-        list.add(vanin);
-        list.add(petin);
-        list.add(lenin);
-        list.add(stalin);
-        list.add(putin);
-
+        List<Employee> list = new ArrayList<>(List.of(
+                new Employee("Ivanov", 45, 100_000),
+                new Employee("Petrov", 35, 100_000),
+                new Employee("Vanin", 40, 80_000),
+                new Employee("Petin", 45, 10_000),
+                new Employee("Lenin", 35, 120_000),
+                new Employee("stalin", 40, 50_000),
+                new Employee("putin", 35, 40_000)));
         List<Employee> newlist = bubbleSortByAge(list);
         printList(newlist);
     }
+
+    public static Employee compareEmployees (Employee employee1, Employee employee2) {
+        if (employee1.getAge() >= employee2.getAge()) {
+            return employee1;
+        } else {
+            return employee2;
+        }
+    }
+
     public static List<Employee> bubbleSortByAge(List<Employee> list) {
         for (int j = 0; j < list.size() - 1; j++) {
             int count = 0;
